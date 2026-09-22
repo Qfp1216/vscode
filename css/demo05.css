@@ -1,0 +1,164 @@
+
+/* 匹配攆定的属性名的所有元素 */
+/* [align]{
+    color: #f00;
+} */
+/* p[align]{
+    color: #f00;
+} */
+
+/* 匹配属性等于指定值的所有元素 */
+[align=center]{
+    color: #00f;
+}
+
+/* 匹配属性以指定值开头的所有元素 */
+font[color^="#FF"]{
+    border: 1px solid #f00;
+}
+
+/* 匹配属性的值以指定值结束的所有元素 */
+font[color$="00"]{
+    border: 1px solid #00f;
+}
+
+/* 匹配属性中包含指定值的所有元素,并且不区分大小写 */
+font[color*="ee"]{
+    border: 1px solid rgb(98, 221, 151);
+}
+
+/* ----继承性---- */
+body{
+    color: #f00;
+}
+/* 给 div 标签来一个边框  border：1px solid #ccc */
+/* div 标签相对于 h2 标签和p 标签来说 它是一个外层元素 */
+/* 现在给外层元素设置一个边框的样式 这个边框会不会被继承 */
+/* 如果会 h2 和 p 标签都会有一个边框 */
+div{
+    color: #00f;
+    border: 1px solid #ccc;
+}
+
+/* !important属性 */
+.p1{
+    /* 加了！Important的属性它的权重值会变得无穷 */
+    /*  正确的写法 */
+    /* 属性：值 ！important; */
+    color: green !important;
+    /* ！important 它是提升的属性的权重，而不是提升选择器的权重！ */
+    font-size: 100px;
+}
+    /* 错误的写法 */
+    /* 属性：值；！important; （不能将！important 写在分号的外面 一定要写在分号的里面） */
+
+#d1{
+    color: #00f;
+    /* ！important 它是提升的属性的权重，而不是提升选择器的权重！ */
+    /* 所以此时文字大小是20px而不是100px */
+    font-size: 20px;
+}
+
+.d2{
+    /* ！important 它不能提升继承过来的权重!  */
+    color: pink !important;
+}
+.p2{
+    color: aqua;
+}
+
+/* 一个标签内可以携带多个类名 */
+.d31{
+    font-weight: bold;
+}
+.d32{
+    color: red;
+}
+
+/* 背景样式属性 */
+.d4{
+    /* 用于给元素设置背景颜色但是前提这个元素要么有内容，要么有宽度和高度才可以 */
+    background-color: pink;
+}
+.d5{
+    width: auto;
+    height: 200px;
+    /* 背景图像,默认平铺 */
+    background-image: url(../images/水浒传.webp);
+    /* 表示平铺 */
+    /* background-repeat: repeat;  */
+    /* repeat-x水平平铺，repeat-y垂直平铺，no-repeat不平铺 */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.d6{
+    width: 900px;
+    height: 600px;
+    /* 默认水平与垂直平铺 */
+    background-image: url(../images/图片4-小.jpg);
+    /* 修改为只在水平方向平铺 */
+    background-repeat: repeat-x;
+}
+.d7{
+    width: 400px;
+    height: 300px;
+    /* 居中 */
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(../images/图片1-mini.jpg);
+    /* 图片不平铺 */
+    background-repeat: no-repeat;
+    /* 图片位置，使用英文 */
+    /* background-position: left bottom; */
+    /* 图片位置，使用固定值 */
+    background-position: 100px 100px;
+    /* 图片位置，使用百分比表示 */
+    background-position: 50% 10%;
+    /* 混合使用 */
+    background-position: 100px top;
+}
+.d8{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/图片1-mini.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: scroll;
+}
+.d9{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: url(../images/图片1-mini.jpg) pink no-repeat center center;
+}
+
+.d10{
+    width: 600px;
+    margin: auto;
+}
+.d10 h2{
+    height: 35px;
+    line-height: 35px;
+}
+
+/* 背景样式属性综合案例 */
+.d10 ul li{
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+    /* 给每一个li标签设置 一个背景图片 */
+    background-image: url(../images/图片2_resized.png);
+    background-repeat: no-repeat;
+    /* 设置背景图片位置 */
+    background-position: left center;
+    /* 左内填充，盒子里面的内容到左边边框线的距离 */
+    padding-left: 15px;
+}
+.d10 ul li a:link,a:visited{
+    color: rgb(229, 151, 245);
+    text-decoration: none;
+}
+.d10 ul li a:hover{
+    color: #f00;
+}

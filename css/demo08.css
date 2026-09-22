@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.d1{
+    width: 600px;
+    border: 1px solid ;
+    margin: 100px auto;
+    /* background-color: pink; */
+}
+.d1 div{
+    width: 100px;
+    height: 100px;
+}
+.d1 .div1{
+    background-color: pink;
+}
+.d1 .div2{
+    background-color: aqua;
+    /* 相对定位属性 */
+    position: relative;
+    /* 设置定位坐标,是以自己作为 */
+    left: 100px;
+}
+.d1 .div3{
+    background-color: beige;
+}
+
+/* 使用属性选择器来匹配元素 */
+input[type="text"]{
+    font-size: 36px;
+}
+input[type="button"]{
+    /* 使得按钮与输入框下边在同一水平面上 */
+    position: relative;
+    top: 4px;
+}
+
+/* 绝对定位 */
+.d2{
+    width: 600px;
+    border: 1px solid;
+    margin: 100px auto;
+    /* 给其设置一个相对定位 */
+    position: relative;
+    
+}
+.d2 div{
+    width: 100px;
+    height: 100px;
+}
+.d2 .div1{
+    background-color: palegoldenrod;
+}
+.d2 .div2{
+    background-color: pink;
+    /* 绝对定位属性 */
+    position: absolute;
+    /* 设置定位坐标*/
+    right: 0px;
+    top: 0px;
+}
+.d2 .div3{
+    background-color: bisque;
+}

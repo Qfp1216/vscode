@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖</title>
+    <style>
+        h3{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    
+    <script>
+
+        function debounce(fn,delay) { 
+            var timer = null;
+            // 闭包
+            return function(){
+                if(timer){
+                    clearTimeout(timer);
+                }
+                timer  = setTimeout(fn,delay);
+            }
+         }
+
+        // 滚动事件
+        // window.onscroll = function(){
+        //     console.log("页面滚动了");
+        // }
+        // 另一个写法
+        window.onscroll = debounce(scrollHandle,200);
+        function scrollHandle(){
+            // console.log("页面滚动了");
+            var scrollTop = document.documentElement.scrollTo;
+            console.log(scrollTop);
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

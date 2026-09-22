@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器之setInterval()</title>
+    <style>
+        #someDiv{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- settimeout是延时多少时间执行，setinterval是每间隔多少时间执行一次 -->
+
+    <div id="someDiv"></div>
+
+    <script>
+        var div = document.getElementById("someDiv");
+        // 透明度opacity:0~1
+        // 通过定时器执行透明度变化
+        var opacity = 1;
+        var flag = 1;
+        var fade = setInterval(() => {
+            div.style.opacity = opacity;
+            // opacity小于0就是变全透明
+            if(opacity > 0 && flag == 1){
+                opacity -= 0.05;
+                div.style.opacity = opacity;
+            }else{
+                // 小于0取消定时器
+                // clearInterval(fade);
+
+                // 呼吸灯效果
+                opacity += 0.05;
+                flag = 0;
+                if(opacity == 1) flag = 1;
+                div.style.opacity = opacity;
+            }
+        }, 100);
+
+        
+
+    </script>
+
+
+
+</body>
+</html>

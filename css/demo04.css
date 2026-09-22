@@ -1,0 +1,98 @@
+
+/* 多元选择器，给列表中所有选择器设置样式 */
+/* span,p,h2,li{
+    color: pink;
+    text-decoration: underline;
+} */
+
+/* 后代元素选择器 */
+/* 匹配 .d1这个盒子里面的所有的 h2 后代元素 */
+/* .d1 h3{
+    color: blue;
+} */
+
+/* 子元素选择器 */
+/* 匹配.box下面的h2子元素 只匹配一级元素，其中再下一层是孙子 */
+.d1 > h3{
+    color: blue;
+}
+
+/*无序列表样式属性*/
+.d2 ul{
+    /* 去除列表前的小黑点 */
+    /* 其他：disc (实心园),square (实心小方块),circle (空心园)  */
+    list-style-type: none;
+
+}
+.d3 ul li{
+    /* 加边框 */
+    border: 1px solid #f00;
+    height: 40px; /*将文本在框中居中对齐*/
+    line-height: 40px;
+    /* 设置列表项标记的放置位置,inside (在里面),outside (在外面)  */
+    list-style-position: inside;
+}
+
+/* 	将图象设置为列表项标记。 */
+.d4 ul li{
+    /* 要先去掉前面的点 */
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url(../images/图片2.png);
+}
+
+.d5 ul li{
+    /* 在一个声明中设置所有列表属性 square inside url(arrow.gif) */
+    /* 属性个数和位置都不是固定的 */
+    list-style: none inside url(../images/图片2.png);
+}
+
+.d6{
+    width: 400px;
+    border: 1px solid black;
+    /* margin: auto; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.d6 #title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    /* border: 1px solid red; */
+}
+.d6 #con ul li{
+    height: 30px;
+    line-height: 30px;
+    /* list-style-type: none;
+    list-style-image: url(../images/图片2_resized.png); */
+    /* 简写 */
+    list-style: none url(../images/图片2_resized.png);
+}
+
+/* 超级链接没有被访问 :link */
+.d7 a:link{
+    color: red;
+}
+/* 超级链接已经被访问 :visited. */
+.d7 a:visited{
+    color: rgb(151, 165, 209);
+}
+/* 鼠标放在超级链接上面，但是并没有将鼠标的左键按下去 ：hover */
+.d7 a:hover{
+    color: green;
+}
+/* 鼠标左键已经按下去了，但是并没有将鼠标的左键弹出:active */
+.d7 a:active{
+    color: pink;
+}
+
+.d8 a:link,a:visited{
+    /* 去掉超级链接的下划线;设置一个颜色 */
+    text-decoration: none;
+    color: green;
+}
+.d8 a:hover{
+    /* 设置另外一个颜色;增加一张下划线 */
+    color: black;
+    text-decoration: underline;
+}

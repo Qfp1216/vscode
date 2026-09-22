@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5</title>
+
+    <style>
+        #div1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+    </style>
+    <script>
+        function allowDrop(ev){
+            ev.preventDefault();
+            
+        }
+        // 放置
+        function drag(ev){
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        // 拖动
+        function drop(){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appenChild()
+        }
+    </script>
+</head>
+<body>
+    <!--银屏 -->
+    <!-- 导入声音 -->
+     <!-- control 属性供添加播放、暂停和音量控件-->
+    <audio src="/MP4/我本将心向明月 奈何明月照沟渠.mp4_爱给网_aigei_com.mp4" controls="controls">浏览器不支持</audio>
+
+    <!--  -->
+    <audio controls="controls">
+        <source src="/MP4/海边白噪音_有海浪声_轻松的白噪音，可叠加其他背景音乐。_爱给网_aigei_com.mp4">
+        <source src="/MP4/海边白噪音_有海浪声_轻松的白噪音，可叠加其他背景音乐。_爱给网_aigei_com.ogg">
+    </audio>
+
+    <!-- 视频 -->
+    <!-- control属性供添加播放、暂停和音量控件 -->
+    <video src="/MP4/唯美治愈，清晨阳光穿过森林树叶，光斑缓缓移动，微风拂动青草，-src_hd_爱给网_aigei_com.mp4" controls="controls" height="300px" width="400px">浏览器不支持</video>
+
+    <!-- 拖放 -->
+     <!-- 设置元素为可拖放:draggable="true"
+        拖动什么:ondragstart 和 setData()
+        放到何处：Ondragover
+        进行放置:ondrop -->
+    <p>请拖动图片</p>
+    <div id="div1">
+
+    </div>
+    <img id="img1" src="/images/图片1-mini.jpg" alt="" draggable="true" >
+
+
+
+
+</body>
+</html>

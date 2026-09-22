@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js3</title>
+</head>
+<body>
+    
+    <script>
+        console.log("while循环")
+        console.log("循环打印1~10的值")
+        var x=1;
+        while(x <= 10){
+            console.log(x);
+            x++;
+        }
+        // 1~100相加值
+        var x1 = 1 , sumx1 = 0;
+        while(x1 <=100 ){
+            sumx1 += x1;
+            x1++;
+        }
+        console.log(sumx1)
+
+        console.log("break语句")
+        // 跳出完整循环
+        for(var i=0;i<100;i++){
+            if(i==3) break;
+            console.log(i);
+        }
+        console.log("continue语句")
+        // 跳出一次循环
+        for(i=0;i<10;i++){
+            if(i==3) continue;
+            console.log(i);
+        }
+
+        console.log("字符串")
+        // 能单双相互嵌套，但是不能单引号中嵌套单引号或双引号中嵌套双引号
+        // 若需要，则要使用转义字符
+        var str = "需要一个\"水杯\"";
+        // 换行也是
+        var str2 = '需要三个\
+        水杯\
+        ';
+        document.write(str);
+        document.write(str2)
+        var str3 = 'fiuyfha'
+        // 字符串长度
+        console.log(str3.length)//7
+
+        console.log("字符串常用方法")
+        console.log("charAt()")
+        //返回指定位置的字符，参数从0开始，若为负数或者大于等于字符串长度，返回空字符串
+        var str4 = 'fhaurr';
+        console.log(str4.length);
+        console.log(str4.charAt(2));//a
+        console.log(str4.charAt(str4.length-1));//r
+        console.log(str4.charAt(str4.length));
+
+        console.log("concat")
+        // 用于连接两个字符串，返回一个新字符串，不改变原字符串
+        var str5 = 'hello'
+        var str6 = 'world'
+        var result = str5.concat(str6);
+        console.log(result)
+        // 该方法可以接受多个参数
+        var str7 = '!'
+       var result1 = str5.concat(str6,str7)
+        console.log(result1)
+
+        // 如果参数不是字符串，concat方法会将其先转为字符串，然后再连接
+        var num =100
+        var result2 = str5.concat(str6,str7,num)
+        console.log(result2)
+        // 简单方法使用加号即可,但是有区别
+        console.log(result1+num)
+        console.log("concat和加号+的区别")
+        var num1 = 1;
+        var num2 = 2;
+        var num3 = '3'
+        // concat前一定要有一个字符串引用
+        console.log(''.concat(num1,num2,num3));//123
+        console.log(num1+num2+num3)//33
+
+        console.log("substring方法")
+        // 用于从原字符串中取出子字符串并返回，不改变原字符串substring(子字符串开始位置，结束位置(返回结果不含该位置))
+        var name = "itbusrgh"
+        console.log(name.substring(0,2));      
+        // 不写第二个默认到结尾   
+        console.log(name.substring(2));
+        // 大小相反会自动修改，真正使用要注意
+        console.log(name.substring(2,0))
+        // 如果参数是负数，自动将复试转为0
+        console.log(name.substring(2,-3))
+
+        console.log("substr方法")
+        //与substring作用相同，但是该方法的第二个参数是子字符串的长度
+        var name1 = 'helloworld'
+        var result3 = name1.substr(0,4)//hell
+        console.log(result3)
+        // 如果第一个参数是负数，表示倒数计算(倒着数从-1开始)的字符位置；如果第二个参数是负数，，将自动转换成0，即返回空字符串
+        var result4 = name1.substr(-3);//rld
+        console.log(result4);
+        var result5 = name1.substr(0,-4);//空
+        console.log(result5);
+
+        console.log("indexOf()方法")
+        // 确定一个字符串在另一个中第一次出现的位置，返回匹配开始的位置，不匹配返回-1
+        console.log(name1.indexOf('world'));//5
+        console.log(name1.indexOf('a'));
+        // 该方法第2个参数表示从该位置开始向后匹配查找
+        console.log(name1.indexOf('e',1))
+
+        console.log('trim()方法')
+        // 去除字符串两端空格，返回新字符串，不改变原有的
+        // 还可去除制表符(\t、\v)、换行符(\n)、回车符(\v)
+        console.log(' hello ')
+        console.log(' hello '.trim())
+        // ES6扩展方法：trimEnd()、trimStart()
+        console.log(' hello '.trimEnd())
+        console.log(' hello '.trimStart())
+        
+        console.log("split方法")
+        // 按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组
+        console.log("he|ll|o".split("|"))
+        // 若规则为空，则每个字符都是一个元素
+        console.log("he|ll|o".split(""))
+        // 若省略参数，则返回原字符串的数组，仅有一个元素
+        console.log("he|ll|o".split())
+        // 第2个参数，限定返回数组的最大数量
+        console.log("he|ll|o".split("|",2))
+
+
+
+    </script>
+
+</body>
+</html>

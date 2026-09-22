@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo06</title>
+    <link rel="stylesheet" href="../css/demo06.css">
+</head>
+<body>
+    <h3>----浮动----</h3>
+    <!-- 能够实现让多个元素排在同一行，
+     并且给这些元素设置宽度与高度!
+     让多个元素排在同一行:行内元素的特性 -->
+     <!--  -->
+    <div class="d1">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+
+    <br>
+    <br><br><br><br>
+    <h3>----将行内元素进行浮动----</h3>
+    <div class="d2">
+        <!-- 行内元素 -->
+        <span class="s1">文本一</span>
+        <span class="s2">文本二</span>
+        <span class="s3">文本三</span>
+    </div>
+
+    <br><br><br><br>
+    <h3>----浮动案例:设计导航栏----</h3>
+     <!-- 浮动就是允许一些元素的块级元素，自动挪动到它那一行的一侧，并且其他内容向下流动 -->
+    <div class="d3">
+        <ul>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+            <li><a href="">网页栏目</a></li>
+        </ul>
+    </div>
+
+    <br>
+    <h3>----清除浮动----</h3>
+    <!-- 经过浮动的元素，会影响到下面的元素的排版布局
+     浮动元素的父元素没有将浮动元素包裹着。 -->
+     <!-- 清除了浮动不会影响到浮动元素的下面进行排版布局﹐
+      浮动元素的父元素会将浮动元素从视觉上包裹着。 -->
+    <!-- 方法：1.给浮动元素的父元素设置一个固定的高度。（不建议使用） -->
+     <!-- 2. clear是专用于来清除浮动 clear  有三个值 
+      clear:left; 清除左浮动 clear:r ight; 清除右浮动 clear:both; 两者都清除-->
+      <!-- clear 一般是用在最后一个浮动元素的下面在最后一个浮动元素的下面新建一个空白的 div ，里面不放置内容，只用作清除浮动。 -->
+     <!-- 3. overflow 是一个属性 overflow:hidden 原意是用来将溢出的部分进行隐藏  还可以用于清除浮动-->
+    <ul class="u1">
+        <li>栏目</li>
+        <li>栏目</li>
+        <li>栏目</li>
+        <li>栏目</li>
+        <li>栏目</li>
+    </ul>
+    <div class="clear">111</div>
+
+    <br>
+    <h3>----盒子模型----</h3>
+    <div class="d5">padding</div>
+    <div class="d6">margin</div>
+
+    <h5>--margin塌陷现象--</h5>
+    <!-- 在标准的文档流中竖直方向的 margin 值不会叠加它会取较大的值. -->
+     <div class="d7"></div>
+     <div class="d8"></div>
+    <!-- 横着方向是没有 margin 的塌陷现象 -->
+    <span class="m1">文本1</span><span class="m2">文本2</span>
+    <br><br>
+    <!-- 浮动元素它是没有 margin 的塌陷现象的 -->
+     <div class="d9">
+        <div class="div4"></div>
+        <div class="div5"></div>
+     </div>
+     <!-- 清除浮动，防止影响后续排版 -->
+    <div class="clear"></div>
+    <h5>--margin居中--</h5>
+     <!-- Margin 的值可以是 auto
+      当左外边距与右外边距的值都是 auto 时，那么这个盒子就会水平居中 -->
+     <div class="d10"></div>
+     <!-- 1. 使用 margin 来实现水平居中时，一定要有固定的宽度（给这个盒子设置一个宽度）
+      只有块元素可以实现水平居中，行内元素不能实现居中 -->
+    <!-- 2.只有标准文档流中的盒子才可以使用 margin 来实现水平居中 -->
+     <!-- 3.margin 属性是用来实现盒子的水平居中，而不是文本的水平居中 -->
+      <!-- text-align 这个属性是用于实现文本的水平居中，值为 center 表示文本水平居中，不能实现盒子水平居中 -->
+
+    <h5>--善于使用父元素的padding而不是子元素的margin--</h5>
+    <div class="d11">
+        <div class="c1"></div>
+    </div>
+    <br><br>
+
+    <h3>----border属性----</h3>
+    <div class="d12"></div>
+    <br><br>
+
+    <h3>----display属性----</h3>
+    <!-- 用来进行行内元素与块级元素之间的相互转换 -->
+     <!-- 将隐藏的元素显示或者将显示的元素进行隐藏 -->
+      <!-- Display 属性取值：inline (行内)、block (块级)、none (无) -->
+    <span class="c2">测试c2</span>
+    <span class="c3">测试c3</span>
+    <div class="d13">测试d13</div>
+    <!-- 这两个功能是 java Script 使用 -->
+    <!-- display: none (将一个显示的元素进行隐藏) -->
+     <!-- display: block (将一个隐藏的元素进行显示) -->
+    <div class="d14"></div>
+    <br>
+
+    <h5>--display属性综合案例---</h5>
+    <div class="d15">
+        <ul>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+        </ul>
+    </div>
+</body>
+</html>

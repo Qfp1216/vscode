@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo05</title>
+    <link rel="stylesheet" href="../css/demo05.css">
+</head>
+<body>
+    <h3>----属性选择器----</h3>
+    <!-- 属性选择器是通过标签的属性名和属性值来匹配元素。 -->
+    <p align="center">aa</p>
+    <h2 align="center">bb</h2>
+    <p align="left">cc</p>
+
+    <font color="#FF00cc">颜色</font>
+    <font color="#FFAAcc">颜色</font>
+    <font color="#FFaabb">颜色</font>
+    <font color="#FFaadd">颜色</font>
+    <font color="#ddaabb">颜色</font>
+
+    <br>
+    <font color="#000000">颜色</font>
+    <font color="#bbAA00">颜色</font>
+    <font color="#00aabb">颜色</font>
+    <font color="#ccaa00">颜色</font>
+    <font color="#00aabb">颜色</font>
+
+    <br>
+    <font color="#eeaabb">颜色</font>
+    <font color="#00ccbb">颜色</font>
+    <font color="#00aaEE">颜色</font>
+
+    <h3>----继承性----</h3>
+    <!-- 外层元素身上的样式会被内层元素所继承 -->
+     <!-- 如果内层元素与外层元素身上的演示相同时，外层元素的样式会被内层元素所覆盖 -->
+      <!-- 并不是所有样式能被继承，只有文本与字体样式属性能被继承，其他样式属性不能被继承 -->
+     <div>
+        <h2>前端开发高级测试</h2>
+        <p>掌握企业中如何利用常见工具，进行前端开发软件的版本控制与项目构建和协同。开发方面，熟练掌握Vue.js、React、AngularJS和响应式框架Bootstrap，具备开发高级交互网页的能力，具备基于移动设备的Web前端开发，以及Node.js服务器端开发技能。</p>
+    </div>
+
+    <h3>----优先级----</h3>
+    <!-- 行内样式> ID 选择器>类选择器>标签选择器 -->
+     <!-- 选择器指向的越准确，优先级就会越高 -->
+
+
+    <h3>----!important属性----</h3>
+    <!-- 主要是用来提升属性的权重，其属性的权重值无穷大 -->
+     <!-- ！important 它是提升的属性的权重，而不是提升选择器的权重！ -->
+    <p class="p1" id="d1">测试段落</p>
+    <!-- ！important 它不能提升继承过来的权重!  -->
+     <div class="d2">
+        <p class="p2">测试</p>
+     </div>
+
+    <h3>----一个标签内可以携带多个类名----</h3>
+     <!-- class 的属性值可以有多个，每一个属性值之间使用空格分隔 -->
+      <!-- 缺点：一个标签内有多个类名，它们设置的样式如果一样，那么就会存在样式冲突  -->
+       <!-- 以 css 中的代码作为标准，谁写在后面就以谁作为标准，和 HTML 中的 class 属性值顺序没有关系。 -->
+    <div class="d31">测试1</div>
+    <div class="d32">测试2</div>
+    <div class="d31 d32">测试3</div>
+
+    <h3>----背景样式属性----</h3>
+     <!-- background-color -->
+     <div class="d4">测试</div>
+
+     <!-- background-image -->
+     <div class="d5"></div>
+
+     <!-- background-repeat背景图像是否重复 -->
+     <div class="d6"></div>
+
+     <!-- background-position 背景图像起始位置(x,y)-->
+      <!-- 水平位置：left（居左）、center、right -->
+       <!-- 垂直位置：top、center、bottom -->
+     <div class="d7"></div>
+
+     <!-- background-attachment 设置背景图像是否固定或者随着页面的其余部分滚动。-->
+     <!-- scroll(滚动)、fixed(固定) -->
+     <div class="d8">掌握企业中如何利用常见工具，进行前端开发软件的版本控制与项目构建和协同。开发方面，熟练掌握Vue.js、React、AngularJS和响应式框架Bootstrap，具备开发高级交互网页的能力，具备基于移动设备的Web前端开发，以及Node.js服务器端开发技能。掌握企业中如何利用常见工具，进行前端开发软件的版本控制与项目构建和协同。开发方面，熟练掌握Vue.js、React、AngularJS和响应式框架Bootstrap，具备开发高级交互网页的能力，具备基于移动设备的Web前端开发，以及Node.js服务器端开发技能。掌握企业中如何利用常见工具，进行前端开发软件的版本控制与项目构建和协同。开发方面，熟练掌握Vue.js、React、AngularJS和响应式框架Bootstrap，具备开发高级交互网页的能力，具备基于移动设备的Web前端开发，以及Node.js服务器端开发技能。掌握企业中如何利用常见工具，进行前端开发软件的版本控制与项目构建和协同。开发方面，熟练掌握Vue.js、React、AngularJS和响应式框架Bootstrap，具备开发高级交互网页的能力，具备基于移动设备的Web前端开发，以及Node.js服务器端开发技能。掌握企业中如何利用常见工具，进行前端开发软件的版本控制与项目构建和协同。开发方面，熟练掌握Vue.js、React、AngularJS和响应式框架Bootstrap，具备开发高级交互网页的能力，具备基于移动设备的Web前端开发，以及Node.js服务器端开发技能。</div>
+
+     <!-- 简写属性,其值位置和顺序不定，每个用空格隔开 -->
+    <div class="d9"></div>
+
+    <h3>----背景样式属性综合案例----</h3>
+    <!-- 设置无序列表的图标 -->
+    <div class="d10">
+        <h2>标题</h2>
+        <ul>
+            <li><a href="">前端开发初级测试</a></li>
+            <li><a href="">前端开发初级测试</a></li>
+            <li><a href="">前端开发初级测试</a></li>
+            <li><a href="">前端开发初级测试</a></li>
+            <li><a href="">前端开发初级测试</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

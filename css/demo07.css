@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.d1 .p1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* 使用固定定位 */
+    position: fixed;
+}
+.d2 a{
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-color: #ccc;
+    /* 水平居中 */
+    text-align: center;
+    /* 垂直居中 ,两行文字不能设60，应该为30*/
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /* 使用固定定位，实现返回顶部 */
+    position: fixed;
+    /* 离右边30像素 */
+    right: 30px;
+    /* 离下边100像素 */
+    bottom: 30px;
+
+}
+/* 案例2:使用固定定位来实现顶部的导航栏 */
+.d3{
+    width: 100%;
+    height: 60px;
+    background-color: #f8e0e022;
+    /* 使用固定定位 */
+    position: fixed;
+    left: 0px;
+    top: 200px;
+}
+.d3 .d4{
+    width: 1000px;
+    height: 60px;
+    margin: 0px auto;
+    /* background-color: rgb(156, 186, 191); */
+}
+.d3 .d4 ul{
+    list-style: none;
+}
+.d3 .d4 ul li{
+    float: left;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.d3 .d4 ul li a{
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.d3 .d4 ul li a:hover{
+    background-color: aliceblue;
+}

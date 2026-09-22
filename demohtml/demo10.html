@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js1</title>
+</head>
+<body>
+    <script>
+        // 声明一个变量
+        // 一般一行一个语句，标识符、关键字
+        var num=10;
+        num = 30;
+        // 打印
+        console.log(num);
+
+    </script>
+
+    <!-- 引入js -->
+     <script src="/js/demo10.js"></script>
+
+     <script>
+        // 基础类型
+        // 数字/数值 类型
+        var age=20;
+        // 字符串类型
+        var name = 'iwen'
+        var name2 = "血糖"
+        // 布尔类型
+        var flag = true;
+        var flags = false;
+
+        // 合成/复合/y引用类型 ：object(对象)
+        var user = {
+            age : 18,
+            name : 'iwen',
+            marry: false
+        }
+        // null和undafined没有特殊意义，但是也是两种数值类型
+     </script>
+
+     <script>
+        // typeof检测数据类型(判断基本数据类型使用)
+        var agef=200;
+        console.log(typeof agef);//number
+        var namef='iwen';
+        console.log(typeof namef);//string
+        var flagf=true;
+        console.log(typeof flagf);//boolen
+        var userf = {};
+        console.log(typeof userf);//object(可以返回这个的有很多情况，如下)
+        console.log(typeof []);//object
+
+        console.log(typeof null);//object
+        console.log(typeof undefined);//undefined
+        // 努力一般代表对象为“空”，undefined一般代表数值为“没有”
+
+     </script>
+</body>
+</html>

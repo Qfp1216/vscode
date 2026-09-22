@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器之setTimeout</title>
+</head>
+<body>
+    
+    <script>
+
+        // setTimeout(function(){
+        //     console.log("3秒后执行");
+        // },3000)
+
+        // var name = "it"
+        // var user = {
+        //     name:"it2",
+        //     getName:function(){
+        //         // this永远指向当前调用者
+        //         // console.log(this.name);//it2
+        //         // 在定时器中this指向全局
+        //         // setTimeout(function(){
+        //         //     console.log(this.name)//it
+        //         // },1000)
+        //         // 若使用计时器但是想要user中的,解决办法是
+        //         var that = this;
+        //         setTimeout(function(){
+        //             console.log(that.name);//it2
+        //         },1000)
+        //     }
+        // }
+
+        // user.getName();
+
+
+        // 取消定时器
+        var timer = setTimeout(function(){
+            console.log("3秒后执行")
+        },3000)
+        clearTimeout(timer);
+
+        
+    </script>
+
+
+</body>
+</html>

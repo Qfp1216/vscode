@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+    <style>
+        h3{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+
+    <script>
+
+        // 节流
+        // 防抖是一只滑动就不会输出，节流就算一直不动也会在2秒后触发
+        function throttle(fn,delay){
+            var valid = true;
+            return function(){
+                if(!valid){
+                    return false;
+                }
+                valid = false;
+                setTimeout(function(){
+                    fn();
+                    valid=true;
+                },delay)
+            }
+        }
+
+
+
+        window.onscroll = throttle(scrollHandle,2000);
+
+        function scrollHandle(){
+            // console.log("页面滚动了");
+            var scrollTop = document.documentElement.scrollTo;
+            console.log(scrollTop);
+        }
+
+    </script>
+
+
+
+</body>
+</html>

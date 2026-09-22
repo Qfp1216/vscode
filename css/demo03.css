@@ -1,0 +1,115 @@
+/* 通用选择器 */
+/* *{
+    background-color: rgb(136, 184, 226);
+} */
+
+/* 标签选择器 */
+/* div{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+} */
+
+/* 类选择器 */
+/* 只要拥有相同的class属性值，不管什么标签都会设置样式 ，即class属性值不唯一*/
+.d1{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    text-decoration: underline;
+    background-color: rgb(132, 204, 121);
+}
+
+/* id选择器 */
+/* 可以为标有特定id的html元素指定特定的样式，id属性值必须唯一 */
+#d2{
+    width: 100px;
+    height: 100px;
+    text-align: left;
+    text-decoration: overline;
+    background-color: rgb(187, 171, 230);
+}
+#d3{
+    color: red;
+    background-color: bisque;
+    text-align: right;
+    text-decoration: line-through;
+}
+
+#a1{
+    /* 去掉链接下划线 */
+    text-decoration: none;
+}
+
+#d4 #l1{
+    /* 首字母大写 */
+    text-transform: capitalize;
+}
+#d4 #l2{
+    /* 小写转大写 */
+    text-transform: uppercase;
+}
+#d4 #l3{
+    /* 大写转小写 */
+    text-transform: lowercase;
+}
+.d5 #l1{
+    /* 首行缩进两个字符 */
+    /* 一个em表示一个汉字的位置，可用24px代替一个位置 */
+    text-indent: 2em;
+}
+.d5 #l2{
+    /* 设置字符间距 */
+    letter-spacing: 20px;
+}
+.d5 #l3{
+    height: 40px;
+    /* 行高，用来设置文本的居中对齐,方式：行高的值与高度的值相同即可*/
+    line-height: 40px;
+    /* 设置边框 */
+    border: 1px solid #f00;
+}
+.d6 #l1{
+    /* 将文字设为斜体 */
+    font-style: italic;
+    /* 加粗 */
+    font-weight: bold;
+    /* 设置字体大小 */
+    font-size: 20px;
+}
+.d6 i{
+    /* 将斜体恢复正常 */
+    font-style: normal;
+}
+.d6 b{
+    /* 将加粗设为正常属性 */
+    font-weight: normal;
+}
+.d6 #l2{
+    /* 可写多个，若前面字体每天就使用后面的 */
+    /* 是否能够显示此字体是根据用户电脑里是否存在对应字体文件
+    若没有就显示宋体，一般特殊字体都是使用图片表示 */
+    font-family: "楷体","黑体";
+}
+.d6 #l3{
+    /* 简写是有顺序的 */
+    font: italic bold 18px "黑体";
+}
+.title{
+    color: #f00;
+}
+.c #c1{
+    font-size: 14px;
+    font-family: 楷体;
+}
+.c #c2 #f1{
+    font-size: 35px;
+    color: green;
+}
+.c #c2 #f2{
+    font-size: 35px;
+    color: purple;
+}
+.c #c3{
+    font-family: 黑体;
+}

@@ -1,0 +1,269 @@
+/* 第一步，清除HTML标签默认的外边距和内填充 */
+*{
+    margin: 0;
+    padding: 0;
+}
+.d1{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    /* float:这个属性有两个值left(向左浮动)向左移动、right(向右浮动) */
+    /* 浮动元素它脱离标准文档流它不再占用空间了,相当于一个浮萍浮在上面 */
+    /* 浮动元素它遇到了父元素的边框然后就停止了浮动 */
+    /* 浮动元素它的层级要比标准文档流里面的元素层级要高，它会将标准文档流中的元素给压盖住 */
+    float: left;
+}
+.div2{
+    width: 120px;
+    height: 100px;
+    /* 浮动元素它还会遇到上一个浮动元素后就停止了浮动 */
+    float: left;
+    background-color: rgb(150, 167, 235);
+}
+.div3{
+    width: 100px;
+    height: 100px;
+    /* 浮动元素浮动以后 其父元素不会再包裹着浮动元素 */
+    float: right;
+    background-color: rgb(205, 255, 192);
+}
+
+/* 将行内元素进行浮动 */
+.d2{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+.d2 .s1{
+    /* 给行内元素设置宽高没用，需要变成块状元素 */
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    /* 我们将行内元素进行浮动以后 那么这个行内元素它会变成块级元素 */
+    float: left;
+}
+.d2 .s2{
+    background-color: rgb(168, 165, 246);
+}
+.d2 .s3{
+    background-color: rgb(229, 245, 166);
+}
+
+/* 浮动案例:设计导航栏 */
+.d3{
+    width: 960px;
+    height: 40px;
+    margin: auto;
+    background-image: url(../images/图片4-小.jpg);
+
+}
+.d3 ul{
+    list-style: none;
+}
+.d3 ul li{
+    /* 把每一个li标签向左浮动 */
+    /* li标签本来是块状元素，浮动后就可按每一个li排列成一行 */
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    /* 文本居中 */
+    text-align: center;
+}
+.d3 ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 清除浮动 */
+.u1{
+    margin-left: 20px;
+    list-style: none;
+    /* 取消浮动 */
+    /* overflow: hidden; */
+    
+}
+.u1 li{
+    float: left;
+}
+.clear{
+    /* 取消浮动 */
+    clear: both;
+}
+
+/* 盒子模型 */
+.d5{
+    width: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    /* 简写，padding 上右下左 */
+    border: 1px solid black;
+}
+.d6{
+    width: 100px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+     /* 简写，margin 上右下左 */
+    border: 1px solid black;
+}
+/* margin塌陷现象 */
+/* 竖直方向的 margin 值不会叠加它会取较大的值 */
+.d7{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    margin-bottom: 40px;
+}
+.d8{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(178, 236, 208);
+    /* 这里的margin并没有叠加为60px，而是取较大值40px */
+    margin-top: 40px;
+}
+/* 横着方向是没有 margin 的塌陷现象 */
+.m1{
+    background-color: pink;
+    margin-right: 40px;
+}
+.m2{
+    background-color: aquamarine;
+    margin-left: 40px;
+}
+/* 浮动元素它是没有 margin 的塌陷现象的 */
+.d9{
+    width: 100px;
+    border: 1px solid black;
+    /* 清除浮动 */
+    /* overflow: hidden; */
+}
+.d9 .div4{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    float: left;
+    margin-bottom: 40px;
+}
+.d9 .div5{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 255, 241);
+    float: left;
+    margin-top: 40px;
+}
+/* margin居中 */
+.d10{
+    width: 100px;
+    height: 100px;
+    background-color: palegoldenrod;
+    margin: auto;
+    margin-top: 20px;
+}
+/* 善于使用父元素的padding而不是子元素的margin */
+.d11{
+    width: 200px;
+    height: 300px;
+    background-color: antiquewhite;
+    /* 设置上外边距20px */
+    /* 第一种方法:给其父元素设置一个边框线,子元素使用margin-top */
+    /* 这种方法不常用，边框一般是用于来调试代码,很少给一个盒子设置边框。 */
+    /* border: 1px solid black; */
+
+    /* 第二种方法:不要使用子元素的 margin 而是要使用其父元素的 paddinge */
+    padding-top: 20px;
+    /* margin 属性本意用于来描述兄弟与兄弟元素之间的关系不是用于描述父子元素之间的关系。 */
+    /* 描述父子元素的关系最好使用给其父元素设置 padding 属性。 */
+    /* 当我们给父元素添加padding时，它会向内部扩展，为其中的子元素提供额外的空间。 */
+
+}
+.d11 .c1{
+    width: 80px;
+    height: 80px;
+    background-color: pink;
+    /* margin-top: 20px; */
+
+}
+
+/* border属性 */
+.d12{
+    width: 100px;
+    height: 100px;
+    /* 边框的颜色可以省略不写,
+    但是如果不写的话就表式边框的颜色为黑色,
+    其他的两个属性值不能不写 如果不写的话就不会显示边框 */
+    /* border: 1px dashed; */
+    /* 边框有四个方向 */
+    border-top: 2px solid pink;
+    border-bottom: 1px dashed red;
+    border-left: 1px dotted green;
+    border-right: 1px groove blue;
+}
+
+/* display属性 */
+.c2{
+    /* 行内元素，设置不了宽高 */
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    /* 改为块状元素，宽高可设置 */
+    display: block;
+    margin-bottom: 20px;
+}
+.c3{
+    /* 行内元素，设置不了宽高 */
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+.d13{
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    /* 块级元素转换为行内元素，宽高变为无效 */
+    display: inline;
+}
+.d14{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    /* 将显示的元素隐藏 */
+    display: none;
+}
+/* display综合案例 */
+.d15{
+    width: 960px;
+    height: 40px;
+    margin: 100px auto;
+    background-image: url(../images/图片4-小.jpg);
+    /* border: 1px solid; */
+}
+.d15 ul{
+    list-style: none;
+}
+.d15 ul li{
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.d15 ul li a{
+    width: 120px;
+    height: 40px;
+    /* a标签是行内元素，要想将宽高有效需要转变为块状元素 */
+    display: block;
+}
+.d15 ul li a:link,.d15 ul li a:visited{
+    text-decoration: none;
+    color: rgb(14, 37, 80);
+}
+.d15 ul li a:hover{
+    background-color: rgb(129, 182, 235);
+}

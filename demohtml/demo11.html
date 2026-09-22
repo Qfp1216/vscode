@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2</title>
+</head>
+<body>
+    
+    <script>
+        // 运算符
+        // 算数运算符
+        var num1 = 100;
+        var num2 = 200;
+        console.log(num1+num2);
+        console.log(num1-num2);
+        console.log(num1*num2);
+        console.log(num1/num2);
+        console.log(num1%num2);
+        // 自增自减运算,使用的变量一定会改变，就是输出运算符在前就变，在后就是这个数字
+        var num3 = 20;
+        console.log(num3++);//20
+        console.log(num3);//21
+        console.log(++num3);//22
+        console.log(num3);//22
+        console.log(num3--);//22
+        console.log(num3);//21
+
+        //赋值运算符
+        // 返回布尔值
+        var x = 1;
+        var y = 2;
+        console.log('赋值运算');
+        console.log(x);//1
+        x += y;
+        console.log(x);//3
+
+        // 比较运算符
+        var x2 = 5;
+        var y2 = 10;
+        console.log('比较运算');
+        console.log(x2 > y2);//false
+
+        // == === != !==
+        var x22 = 10;
+        var y22 = '10';
+        console.log(x22 == y22);//true
+        console.log(x22 === y22);//faluse,严格比较，比较值和类型
+
+        console.log(x22 != y22);//fasle
+        console.log(x22 !== y22);//true,严格比较,类型不同
+
+        // 布尔运算符
+        var flag = true;
+        console.log('布尔运算')
+        console.log(!flag);
+        console.log('非布尔值取反')
+        // 记住特殊取反为true(6个），其他取反是false
+        console.log(!null);
+        console.log(!undefined);
+        console.log(!0);
+        console.log(!"");
+        console.log(!NaN);
+        console.log(!false);//true
+        console.log('特殊六个');
+        console.log(!100);//false
+        console.log(!'100');
+        console.log(!'iwen');
+        console.log(!{name:'iwen'});
+
+        console.log();
+
+        console.log('switch运算');
+        var day = 3;
+        switch(day){
+            case 1:
+                console.log("今天星期1");break;
+            case 2:console.log("今天星期2");break
+            case 3:console.log("今天星期三");break
+            case 4:console.log("今天星期四");break
+            default:console.log("今天星期五");
+        }   
+        
+        console.log("三元运算符");
+        var x3 = 1;
+        x3 % 2 == 1? x3=2 :x3=3;
+        console.log(x3);
+
+        console.log("for循环")
+        for(var x4=0;x4 <= 10;x4++){
+            console.log(x4);
+        }
+        console.log("输出1~100的和")
+        var x44_sum=0;
+        for(var x44=0;x44 <= 100;x44++){
+            x44_sum = x44 + x44_sum;
+        }
+        console.log(x44_sum);
+        console.log("循环输出10以内的奇数")
+        for(var x42=0;x42 <= 10;x42++){
+            if(x42 % 2 != 0)
+                console.log(x42);
+        }
+        console.log("打印九九乘法表")
+        var sum4=0;
+        // 字符串和数字相加：会显示一个字符串的格式 “i+” + i => i=3
+        for(var i = 1; i<10; i++){
+            for(var j = 1; j<= i;j++){
+                sum4 = i*j;
+                // console.log(i+"*"+j+"="+sum4)
+                document.write(j+"*"+i+"="+sum4+" ")
+
+            }
+            // 换行
+            document.write("<br/>")
+        }
+
+
+        
+
+    </script>
+
+</body>
+</html>

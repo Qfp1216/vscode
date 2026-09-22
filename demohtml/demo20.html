@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件类型之表单事件</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <input type="text" id="password">
+
+    <!-- action是提交表单的服务器地址 -->
+    <form action="" id="myform" onsubmit="">
+        <input type="text" name="username" id="">
+        <button id="resetbtn">重置</button>
+        <button>提交表单</button>
+    </form>
+
+
+    <script>
+        var username = document.getElementById("username");
+        // 频繁触发
+        username.oninput = function(e){
+            console.log(e.target.value);
+        }
+        username.onselect = function(e){
+            console.log("选中了");
+        }
+
+        // 触发：失去焦点或回车
+        var password = document.getElementById("password");
+        password.onchange = function(e){
+            console.log(e.target.value);
+        }
+        
+        var resetbtn =document.getElementById("resetbtn");
+        var myform = document.getElementById("myform");
+        resetbtn.onclick = function(e){
+            myform.reset();//触发在表单上:清空表单
+        }
+        function submitHandle(){
+
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

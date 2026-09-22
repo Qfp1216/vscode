@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件处理</title>
+</head>
+<body>
+
+    <!-- HTML事件 -->
+     <!-- 缺点，HTML和JS没有分开 -->
+    <!-- <button onclick="clickHandle()">按钮</button>
+
+    <script>
+        function clickHandle(){
+            alert("点击了按钮");
+        }
+    </script> -->
+
+    <!-- DOM0事件 -->
+     <!-- 优点：HTML与JS是分离的 -->
+      <!-- 缺点：无法同时添加多个事件 -->
+    <!-- <button id="btn">按钮1</button>
+    <script>
+
+        var btn = document.getElementById("btn");
+
+        // 被覆盖了
+        btn.onclick = function(){
+            alert("点击了按钮1");
+        }
+                    btn.onclick = function(){
+            alert("点击了按钮2");
+        }
+        
+    </script> -->
+
+    <!-- DOM2事件 -->
+     <!-- 优点：事件不会被覆盖 -->
+      <!-- 缺点：写起来麻烦 -->
+     <button id="btn2">按钮2</button>
+
+     <script>
+
+        var btn2 = document.getElementById("btn2");
+
+        // 不被覆盖
+        btn2.addEventListener("click",function(){
+            alert("点击了按钮1");
+        })
+                btn2.addEventListener("click",function(){
+            alert("点击了按钮2");
+        })
+
+     </script>
+
+</body>
+</html>
